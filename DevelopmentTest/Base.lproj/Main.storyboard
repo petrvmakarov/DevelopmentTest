@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dHz-QZ-Uj6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Population-->
+        <scene sceneID="lIE-8a-MYs">
+            <objects>
+                <viewController restorationIdentifier="secondTabController" storyboardIdentifier="secondTabController" id="aeM-BJ-AoV" customClass="SecondTabViewController" customModule="DevelopmentTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LVU-Qm-bGW"/>
+                        <viewControllerLayoutGuide type="bottom" id="4gB-Hv-FoB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FNE-je-RsY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lQV-ec-kEx">
+                                <rect key="frame" x="184" y="254" width="233" height="91"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Population" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpM-sg-vlp">
+                                        <rect key="frame" x="18" y="15" width="196" height="23"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="KM0-CT-0lG" userLabel="Loader">
+                                        <rect key="frame" x="98" y="8" width="37" height="37"/>
+                                        <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCh-oZ-gpa">
+                                        <rect key="frame" x="10" y="46" width="212" height="38"/>
+                                        <state key="normal" title="Back to country">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handleGoBackToCountryButton:" destination="aeM-BJ-AoV" eventType="touchUpInside" id="tBf-oz-vfb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="lQV-ec-kEx" firstAttribute="centerX" secondItem="FNE-je-RsY" secondAttribute="centerX" id="46D-tt-gB3"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Y4f-V2-9h8" appends="YES" id="aFe-uX-rnq"/>
+                            <outletCollection property="gestureRecognizers" destination="L1F-e6-Xre" appends="YES" id="3ua-2p-cJU"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Population" id="bAQ-6R-7tW"/>
+                    <connections>
+                        <outlet property="loader" destination="KM0-CT-0lG" id="I3W-Ya-Bur"/>
+                        <outlet property="population" destination="JpM-sg-vlp" id="wT1-6q-7Uv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y5G-8m-5dZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="Y4f-V2-9h8">
+                    <connections>
+                        <action selector="handleSwipe:" destination="aeM-BJ-AoV" id="iJt-sc-SuA"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="L1F-e6-Xre">
+                    <connections>
+                        <action selector="handleSwipe:" destination="aeM-BJ-AoV" id="Cpa-Eg-L2o"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1107" y="902"/>
+        </scene>
+        <!--Country-->
+        <scene sceneID="LJX-Cd-ZKd">
+            <objects>
+                <viewController restorationIdentifier="firstTabController" storyboardIdentifier="firstTabController" id="Cdf-bG-IAr" customClass="FirstTabViewController" customModule="DevelopmentTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JA8-uS-Fel"/>
+                        <viewControllerLayoutGuide type="bottom" id="XXk-vx-aWN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lvD-tg-EYl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6N-J4-J87">
+                                <rect key="frame" x="218" y="208" width="165" height="185"/>
+                                <subviews>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Xa-As-xEr" userLabel="Flag view">
+                                        <rect key="frame" x="20" y="20" width="127" height="85"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vf-lS-N3Z">
+                                        <rect key="frame" x="-218" y="152" width="600" height="22"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="O3G-J7-zkb" userLabel="Loader">
+                                        <rect key="frame" x="64" y="111" width="37" height="37"/>
+                                        <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="Ify-Zj-Vtc"/>
+                                    <constraint firstAttribute="height" constant="185" id="zyT-Ed-aS5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="O6N-J4-J87" secondAttribute="centerX" id="BsY-6S-Z12"/>
+                            <constraint firstAttribute="centerY" secondItem="O6N-J4-J87" secondAttribute="centerY" id="ESB-m4-k7W"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="kDK-T2-0Rw" appends="YES" id="erv-gA-SPM"/>
+                            <outletCollection property="gestureRecognizers" destination="pBt-yH-OH0" appends="YES" id="v47-zC-20q"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Country" id="w1Q-3Y-yYN"/>
+                    <connections>
+                        <outlet property="country" destination="6vf-lS-N3Z" id="TLr-E2-fSl"/>
+                        <outlet property="flag" destination="3Xa-As-xEr" id="JX0-4h-sxb"/>
+                        <outlet property="loader" destination="O3G-J7-zkb" id="IB7-sV-cyc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcb-6w-87m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="kDK-T2-0Rw">
+                    <connections>
+                        <action selector="handleSwipe:" destination="Cdf-bG-IAr" id="tNZ-97-vfg"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="pBt-yH-OH0">
+                    <connections>
+                        <action selector="handleSwipe:" destination="Cdf-bG-IAr" id="sbH-Ih-eqV"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1107" y="210"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="irJ-Cu-6hn">
+            <objects>
+                <tabBarController id="dHz-QZ-Uj6" customClass="MainViewController" customModule="DevelopmentTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="pYb-cp-gch">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Cdf-bG-IAr" kind="relationship" relationship="viewControllers" id="R8e-KC-Mtk"/>
+                        <segue destination="aeM-BJ-AoV" kind="relationship" relationship="viewControllers" id="hg1-0P-dFq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LdQ-IU-bat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="385" y="539"/>
+        </scene>
+    </scenes>
+</document>
