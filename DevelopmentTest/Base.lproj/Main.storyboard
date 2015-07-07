@@ -49,7 +49,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="lQV-ec-kEx" firstAttribute="centerX" secondItem="FNE-je-RsY" secondAttribute="centerX" id="46D-tt-gB3"/>
+                            <constraint firstAttribute="centerX" secondItem="lQV-ec-kEx" secondAttribute="centerX" id="YPB-VU-0E6"/>
+                            <constraint firstAttribute="centerY" secondItem="lQV-ec-kEx" secondAttribute="centerY" id="hxM-Me-smp"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Y4f-V2-9h8" appends="YES" id="aFe-uX-rnq"/>
